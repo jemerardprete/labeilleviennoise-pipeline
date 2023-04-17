@@ -1,0 +1,8 @@
+name: Tests
+on: push
+jobs:
+  tests: 
+    runs-on: ubuntu-test
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v1
